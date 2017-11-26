@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 module.exports = router;
+
 router.get('/',function(req,res){
   res.render('pages/index');
 });
@@ -17,9 +18,10 @@ router.get('/about',function(req,res){
   res.render('pages/about', {users : users});
 });
 
+
 router.get('/contact',function(req,res){
   res.render('pages/contact');
 });
 router.post('/contact',function(req,res){
-    res.send("Thanks for contacting us!" + req.body.email + " we will get to you shortly!");
+    res.send("thanks for contacting,we will get to you soon");
 });
